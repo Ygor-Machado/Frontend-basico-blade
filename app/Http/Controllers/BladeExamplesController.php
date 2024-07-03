@@ -26,4 +26,14 @@ class BladeExamplesController extends Controller
     {
         return view('second');
     }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'name' => 'required|min:3'
+        ]);
+
+        return redirect()->back()->with('success', 'Enviado com sucesso!');
+    }
 }

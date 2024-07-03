@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     {{--    @vite('resources/css/app.css')--}}
     <title>@yield('title')</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     @stack('script')
 
 </head>
