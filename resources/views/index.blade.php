@@ -12,6 +12,19 @@
 {{--        @each('layout.user', $users, 'user')--}}
 {{--    </div>--}}
 <div class="px-10 flex flex-col gap-4">
+
+    @if(Session::has('success'))
+        <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+            <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
+        </div>
+    @endif
+
+    @datetime(now())
+
+    @odd(4)
+        O palmeiras não tem mundial par
+    @endodd
+
     <form action="{{route('send.store')}}" method="POST">
         @csrf
         <div class="flex flex-col gap-4">
@@ -32,7 +45,7 @@
                 </div>
 
                 @error('email')
-                <p class="mt-2 text-sm text-red-600" id="email-error">{{ $message }}</p>
+                    <p class="mt-2 text-sm text-red-600" id="email-error">{{ $message }}</p>
                 @enderror
             </div>
 
@@ -51,6 +64,11 @@
                         value="{{old('name')}}"
                     >
                 </div>
+
+                @error('name')
+                    <p class="mt-2 text-sm text-red-600" id="email-error">{{ $message }}</p>
+                @enderror
+
                 <button>Enviar</button>
             </div>
         </div>
