@@ -1,8 +1,8 @@
-@extends('layout.base')
+{{--@extends('layout.base')--}}
 
-@section('title', 'Home')
+{{--@section('title', 'Home')--}}
 
-@section('content')
+{{--@section('content')--}}
 {{--    <div class="container mx-auto">--}}
 {{--        <h1 class="text-4xl font-bold">Home</h1>--}}
 {{--        <p class="text-lg">This is the home page</p>--}}
@@ -11,69 +11,31 @@
 {{--    <div class="flex flex-col">--}}
 {{--        @each('layout.user', $users, 'user')--}}
 {{--    </div>--}}
-<div class="px-10 flex flex-col gap-4">
-
-    @if(Session::has('success'))
-        <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
-            <span class="font-medium">Success alert!</span> Change a few things up and try submitting again.
+    <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen">
+    <div class="min-h-screen flex flex-col items-center justify-center">
+        <div class="px-32">
+            <main>
+                <x-alert
+                    type="warning"
+                    title="Titulo da mensagem"
+                    message="Mensagem burro"
+                />
+            </main>
         </div>
-    @endif
-
-    @datetime(now())
-
-    @odd(4)
-        O palmeiras não tem mundial par
-    @endodd
-
-    <form action="{{route('send.store')}}" method="POST">
-        @csrf
-        <div class="flex flex-col gap-4">
-            <div>
-                <label for="email" class="block text-sm font-medium text-gray-700"></label>
-                <div class="mt-1">
-                    <input
-                        type="text"
-                        name="email"
-                        id="email"
-                        placeholder="digite seu email amigo"
-                        @class([
-                            'border-red-500' => $errors->has('email'),
-                            'border-gray-300' => !$errors->has('email')
-                        ])
-                        value="{{old('email')}}"
-                    >
-                </div>
-
-                @error('email')
-                    <p class="mt-2 text-sm text-red-600" id="email-error">{{ $message }}</p>
-                @enderror
-            </div>
-
-            <div>
-                <label for="name" class="block text-sm font-medium text-gray-700"></label>
-                <div class="mt-1">
-                    <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="digite seu nome amigo"
-                        @class([
-                            'border-red-500' => $errors->has('name'),
-                            'border-gray-300' => !$errors->has('name')
-                        ])
-                        value="{{old('name')}}"
-                    >
-                </div>
-
-                @error('name')
-                    <p class="mt-2 text-sm text-red-600" id="email-error">{{ $message }}</p>
-                @enderror
-
-                <button>Enviar</button>
-            </div>
-        </div>
-    </form>
-</div>
+    </div>
+</body>
+</html>
 
 
-@endsection
+
+{{--@endsection--}}
