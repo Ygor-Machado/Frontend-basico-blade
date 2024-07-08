@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use Carbon\Carbon;
 use Illuminate\View\Component;
 
 class Alert extends Component
@@ -15,12 +16,16 @@ class Alert extends Component
     public string $type;
     public string $title;
     public string $message;
+    public string $icon;
+    public string $now;
 
-    public function __construct(string $type, string $title, string $message)
+    public function __construct(Carbon $date, string $type, string $title, string $message, $icon = "")
     {
         $this->type = $type;
         $this->title = $title;
         $this->message = $message;
+        $this->icon = $icon;
+        $this->now = $date->format('d/m/Y H:i:s');
     }
 
     public function getBgClass()
@@ -63,6 +68,10 @@ class Alert extends Component
      */
     public function render()
     {
-        return view('components.alert');
+        return function(array $data) {
+            $data['title'] = "Mudando o titulo do seu pai";
+
+           return "components.alert";
+        };
     }
 }
