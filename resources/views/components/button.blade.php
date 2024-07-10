@@ -1,14 +1,24 @@
-@aware(['type' => 'error'])
-
-<div
-    class="cursor-pointer flex justify-center items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+<button
+    type="{{ $type }}"
+    @class([
+        "rounded flex items-center justify-center px-4",
+        "border border-blue-500 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 disabled:bg-gray-500 text-white" => $variation === 'primary',
+        "bg-white border-solid border border-blue-500 text-blue-500 hover:border-blue-600 hover:text-blue-600 active:text-blue-900 disabled:border-gray-500 disabled:text-gray-500" => $variation === 'outline',
+        "py-3 text-md" => $size === 'large',
+        "py-2.5 text-md" => $size === 'medium',
+        "py-2 text-xs" => $size === 'small',
+    ])
 >
-    @if($type === 'success')
-        Sucesso
-    @endif
+    <div class="flex flex-row items-center">
+        @if (!empty($icon) && $iconPosition === 'left')
+            <x-icon :name="$icon" />
+        @endif
 
-    @if($type === 'error')
-        Erro
-    @endif
+        {{ $text }}
 
-</div>
+       @if (!empty($icon) && $iconPosition === 'right')
+            <x-icon :name="$icon" />
+       @endif
+    </div>
+
+</button>
