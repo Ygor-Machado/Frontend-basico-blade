@@ -2,10 +2,12 @@
     <div class="flex flex-row items-center justify-center w-full">
         <x-button
             type="button"
-            text="Primary Button"
+            text="Vai corinthians"
+            name="sei la"
             variation="primary"
             size="large"
-            iconPosition="left"
+            icon="home"
+            iconPosition="right"
         />
 
     </div>

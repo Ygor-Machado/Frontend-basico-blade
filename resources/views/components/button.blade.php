@@ -14,7 +14,15 @@
             <x-icon :name="$icon" />
         @endif
 
-        {{ $text }}
+        @if(!empty($text))
+            <span @class([
+                "ml-2" => !empty($icon) && $iconPosition === 'left',
+                "mr-2" => !empty($icon) && $iconPosition === 'right',
+            ])>
+                {{ $text }}
+            </span>
+        @endif
+
 
        @if (!empty($icon) && $iconPosition === 'right')
             <x-icon :name="$icon" />

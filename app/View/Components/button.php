@@ -18,7 +18,7 @@ class button extends Component
      *
      * @return void
      */
-    public function __construct($type, $variation, $name, $size, $text, $icon = "", $iconPosition = "")
+    public function __construct($type, $variation, $name, $size, $text = "", $icon = "", $iconPosition = "")
     {
         $this->type = $type;
         $this->variation = $variation;
