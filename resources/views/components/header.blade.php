@@ -1,4 +1,4 @@
-<div class="flex flex-row items-center justify-between py-4 w-full border-b border-solid border-gray-300">
+<div class="px-12 flex flex-row items-center justify-between py-4 w-full border-b border-solid border-gray-300">
     <div class="">
         <img class="w-24" src="{{ Vite::images($logo) }}" alt="">
     </div>
@@ -12,7 +12,7 @@
             icon="search"
             icon-position="right"
         />
-        <x-button
+        <x-form.button
             type="button"
             variation="primary"
             size="small"
@@ -23,7 +23,7 @@
 
     <div class="flex flex-row items-center space-x-0.5">
 
-        <x-button
+        <x-form.button
             class="flex md:hidden"
             type="button"
             variation="primary"
@@ -31,7 +31,7 @@
             icon="search"
             icon-position="left"
         />
-        <x-button
+        <x-form.button
             type="button"
             variation="primary"
             size="small"
@@ -40,7 +40,7 @@
             text="Log in"
         />
 
-        <x-button
+        <x-form.button
             type="button"
             variation="outline"
             size="small"

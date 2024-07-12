@@ -12,7 +12,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen w-full flex items-start">
-    <div class="content flex w-full px-12">
+    <div class="flex flex-col items-center w-full">
         <x-header
             logo="logo.png"
         />
