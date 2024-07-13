@@ -1,7 +1,7 @@
 <x-layouts.base>
     <div class="container p-12 flex flex-col">
         <h1 class="text-title-4 font-bold">
-            Nome d produto
+            Nome do produto
         </h1>
 
         <x-bread-crumb :items="['Home', 'Produtos', 'Nome do produto']" />
@@ -14,6 +14,7 @@
 
             <div class="flex flex-col lg:flex-row w-full lg:w-2/3 p-0 lg:p-8">
                 <x-product-info></x-product-info>
+                <x-product-actions></x-product-actions>
             </div>
 
         </div>

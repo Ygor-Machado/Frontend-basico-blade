@@ -12,13 +12,6 @@
             icon="search"
             icon-position="right"
         />
-        <x-form.button
-            type="button"
-            variation="primary"
-            size="small"
-            icon="search"
-            icon-position="left"
-        />
     </div>
 
     <div class="flex flex-row items-center space-x-0.5">
