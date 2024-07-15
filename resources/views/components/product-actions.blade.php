@@ -39,7 +39,7 @@
             size="large"
             icon="shopping_cart"
             icon-position="left"
-            text="Add to cart"
+            text="Adicione ao carrinho"
         >
         </x-form.button>
 
@@ -48,7 +48,7 @@
             type="button"
             variation="outline"
             size="large"
-            text="But now"
+            text="Compre agora"
         >
         </x-form.button>
 
@@ -72,7 +72,7 @@
 
     <div class="flex flex-row items-center bg-blue-300 mt-4 px-6 py-4 rounded-md space-x-2">
         <x-icon size="large" name="local_shipping" class="text-blue-500" />
-        <span class="text-xs font-bold">Free shipping</span>
+        <span class="text-xs font-bold">Frete Grátis</span>
     </div>
 
 </div>

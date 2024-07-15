@@ -1,6 +1,6 @@
 <div {{ $attributes->class(['flex flex-col w-full mt-6']) }} x-transition>
     <span class="text-md font-bold">
-        Description
+        Descrição
     </span>
 
     <span class="text-md font-medium mt-2">
@@ -12,17 +12,17 @@
     </span>
 
     <span class="text-md font-bold mt-8">
-        Specifications
+        Especificações
     </span>
 
     <div class="flex flex-col items-center w-full mt-4">
         @foreach([1,2,3,4,5,6] as $item)
             <div class="flex flex-row w-full justify-between border-b pb-1">
                 <span class="text-md font-bold mt-2">
-                    Feature {{ $item }}
+                    Característica {{ $item }}
                 </span>
                 <span class="text-md font-medium mt-2">
-                    Parameter
+                    ||
                 </span>
             </div>
         @endforeach

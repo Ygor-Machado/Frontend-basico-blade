@@ -21,7 +21,7 @@
         @foreach(["S", "M", "L", "XL"] as $size)
             <span
                 @click="size = '{{ $size }}'"
-                class="cursor-pointer text-[8px] w-7 h-7 flex items-center justify-center p-1 border border-solid border-blue-300 rounded-md"
+                class="cursor-pointer text-xs w-10 h-10 flex items-center justify-center p-1 border border-solid border-blue-300 rounded-md"
                 :class="{'bg-blue-300': size == '{{ $size }}'}"
             >
                 {{ $size }}

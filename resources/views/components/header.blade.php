@@ -1,6 +1,6 @@
 <div class="px-12 flex flex-row items-center justify-between py-4 w-full border-b border-solid border-gray-300">
     <div class="">
-        <img class="w-24" src="{{ Vite::images($logo) }}" alt="">
+        <img class="w-16" src="{{ Vite::images($logo) }}" alt="">
     </div>
 
     <div class="hidden md:flex flex-row items-center space-x-0.5">

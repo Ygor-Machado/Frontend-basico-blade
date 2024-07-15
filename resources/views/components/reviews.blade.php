@@ -10,7 +10,7 @@
             <div class="bg-green-700 w-10 h-10 flex-shrink-0 rounded-full"></div>
 
             <div class="flex flex-col">
-                <h3 class="text-md font-bold">Author</h3>
+                <h3 class="text-md font-bold">Usuário</h3>
                 <div class="flex flex-row items-start mt-1">
                     <x-icon name="star" size="large" class="text-yellow-400"></x-icon>
                     <x-icon name="star" size="large" class="text-yellow-400"></x-icon>
