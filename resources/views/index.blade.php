@@ -1,5 +1,8 @@
 <x-layouts.base>
     <div class="container p-12 flex flex-col">
+
+        <x-cart></x-cart>
+
         <h1 class="text-title-4 font-bold">
             Nome do produto
         </h1>
@@ -18,5 +21,8 @@
             </div>
 
         </div>
+
+        <x-tabs></x-tabs>
+
     </div>
 </x-layouts.base>

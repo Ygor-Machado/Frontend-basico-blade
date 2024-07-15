@@ -32,6 +32,7 @@
         </div>
 
         <x-form.button
+            @click="$dispatch('open-cart')"
             class="mt-4"
             type="button"
             variation="primary"
@@ -54,23 +55,24 @@
         <div class="flex flex-col flex-shrink-0 items-start mt-4 space-y-1">
             <div class="flex flex-row justify-between w-full">
                 <span class="text-sm font-thin text-gray-500">Detalhe 1</span>
-                <span class="text-sm font-thin text-gray-500">informações</span>
+                <span class="text-sm font-thin text-gray-500">info</span>
             </div>
 
             <div class="flex flex-row justify-between w-full">
                 <span class="text-sm font-thin text-gray-500">Detalhe 2</span>
-                <span class="text-sm font-thin text-gray-500">informações</span>
+                <span class="text-sm font-thin text-gray-500">info</span>
             </div>
 
             <div class="flex flex-row justify-between w-full">
                 <span class="text-sm font-thin text-gray-500">Detalhe 3</span>
-                <span class="text-sm font-thin text-gray-500">informações</span>
+                <span class="text-sm font-thin text-gray-500">info</span>
             </div>
         </div>
     </div>
 
     <div class="flex flex-row items-center bg-blue-300 mt-4 px-6 py-4 rounded-md space-x-2">
         <x-icon size="large" name="local_shipping" class="text-blue-500" />
-        <span class="text-xs font-bold">Entrega Grátis</span>
+        <span class="text-xs font-bold">Free shipping</span>
     </div>
+
 </div>
